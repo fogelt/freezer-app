@@ -35,11 +35,39 @@ export default function FreezerList() {
   }
 
   const handleDelete = async (id: string) => {
-    const { error } = await supabase.from('freezer_items').delete().eq('id', id)
-    if (!error) {
-      setItems(prev => prev.filter(i => i.id !== id))
+    const { data: { session } } = await supabase.auth.getSession();
+
+    if (!session) {
+      alert("Du måste vara inloggad för att ta bort varor!");
+      return;
     }
-  }
+
+    const itemToDelete = items.find((i) => i.id === id);
+    if (!itemToDelete) return;
+
+    if (itemToDelete.image_url) {
+      const fileName = itemToDelete.image_url.split('?')[0].split('/').pop();
+      if (fileName) {
+        await supabase.storage
+          .from('freezer-images')
+          .remove([fileName]);
+      }
+    }
+
+    const { error } = await supabase
+      .from('freezer_items')
+      .delete()
+      .eq('id', id);
+
+    if (!error) {
+      setItems((prev) => prev.filter((item) => item.id !== id));
+    } else {
+      console.error("Delete failed:", error.message);
+      if (error.message.includes("policy")) {
+        alert("Du har inte behörighet att ta bort denna vara.");
+      }
+    }
+  };
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
