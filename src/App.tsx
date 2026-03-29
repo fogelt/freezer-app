@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { supabase } from './components/utils/supabase'
+import { supabase } from './components/utils/supabase/supabase'
 import Login from './Login'
 import FreezerList from './FreezerList'
 

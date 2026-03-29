@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { supabase } from '@/utils/supabase'
+import { supabase } from '@/utils'
 import { PrimaryButton } from '@/ui'
 
 export default function Login() {
