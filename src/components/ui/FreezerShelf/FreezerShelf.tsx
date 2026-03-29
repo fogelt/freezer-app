@@ -26,9 +26,9 @@ export default function FreezerShelf({ shelfNumber, items, onAdd, onDelete }: Pr
           </h2>
         </div>
 
-        <div className="w-24">
+        <div className="w-32">
           <PrimaryButton
-            label="+ NY"
+            label="+ Lägg till"
             onClick={() => onAdd(shelfNumber)}
           />
         </div>

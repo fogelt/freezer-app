@@ -22,12 +22,11 @@ export default function PrimaryButton({
       disabled={loading || props.disabled}
       className={`
         group relative w-full cursor-pointer overflow-hidden rounded-xl p-4 font-bold text-white shadow-lg transition-all 
-        hover:scale-[1.02] active:scale-95 disabled:cursor-not-allowed disabled:opacity-50
+        hover:scale-[1.02] active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 border-2 border-black
         ${variantClasses}
         ${className}
       `}
     >
-      {/* Shine effect */}
       <div className="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-700 group-hover:[transform:skew(-12deg)_translateX(100%)]">
         <div className="relative h-full w-8 bg-white/20" />
       </div>
