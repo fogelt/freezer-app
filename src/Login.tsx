@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { supabase } from './components/utils/supabase'
+import { supabase } from '@/utils/supabase'
 import { PrimaryButton } from '@/ui'
 
 export default function Login() {
@@ -17,8 +17,8 @@ export default function Login() {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-slate-50 p-6 font-sans text-slate-900">
-      <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-xl border border-slate-100">
-        <h1 className="mb-2 text-2xl font-bold text-brand text-center uppercase tracking-widest">
+      <div className="w-full max-w-md rounded-2xl bg-white p-4 shadow-xl border border-slate-100">
+        <h1 className="text-4xl font-black tracking-tighter text-brand text-center pb-4">
           Habo frysen
         </h1>
 

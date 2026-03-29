@@ -4,3 +4,9 @@
   --font-sans: "Inter", ui-sans-serif, system-ui;
   --color-brand: #eb9c25;
 }
+
+@layer base {
+  body {
+    @apply font-sans uppercase tracking-widest text-sm antialiased;
+  }
+}
