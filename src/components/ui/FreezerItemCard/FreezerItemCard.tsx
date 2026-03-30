@@ -33,7 +33,7 @@ export default function FreezerItemCard({ item, onDelete }: Props) {
           )}
         </div>
 
-        <h3 className="truncate text-sm font-black tracking-widest text-slate-800 uppercase">
+        <h3 className="text-sm font-black tracking-widest text-slate-800 uppercase">
           {item.name}
         </h3>
       </div>
