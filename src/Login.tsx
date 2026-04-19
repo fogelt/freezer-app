@@ -45,13 +45,6 @@ export default function Login() {
             Habo frysen
           </h1>
 
-          <button
-            onClick={handlePress}
-            className="mb-6 w-full py-2 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors"
-          >
-            Toggle Sidebar
-          </button>
-
           <form onSubmit={handleLogin} className="space-y-4">
             <input
               type="email"
