@@ -2,8 +2,10 @@ import { useState, useEffect } from 'react'
 import { supabase } from './components/utils/supabase/supabase'
 import Login from './Login'
 import FreezerList from './FreezerList'
+import { useKeyboardNavigation } from './hooks/use-keyboard-navigation'
 
 export default function App() {
+  useKeyboardNavigation();
   const [session, setSession] = useState<any>(null)
   const [loading, setLoading] = useState(true)
 

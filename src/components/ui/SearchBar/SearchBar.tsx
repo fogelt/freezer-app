@@ -20,13 +20,13 @@ export default function SearchInput({ value, onChange, placeholder = "SÖK I FRY
           value={value}
           onChange={(e) => onChange(e.target.value)}
           placeholder={placeholder}
-          className="w-full rounded-2xl bg-slate-100 py-4 pl-12 pr-12 text-xs font-black tracking-widest uppercase outline-brand transition-all focus:bg-white focus:shadow-xl focus:shadow-brand/10 border-none"
+          className="nav-item w-full rounded-2xl bg-slate-100 py-4 pl-12 pr-12 text-xs font-black tracking-widest uppercase outline-brand transition-all focus:bg-white focus:shadow-xl focus:shadow-brand/10 border-none"
         />
 
         {value && (
           <button
             onClick={() => onChange('')}
-            className="absolute right-4 flex h-6 w-6 items-center justify-center rounded-full bg-slate-200 text-slate-500 hover:bg-slate-300 active:scale-90 transition-all"
+            className="nav-item absolute right-4 flex h-6 w-6 items-center justify-center rounded-full bg-slate-200 text-slate-500 hover:bg-slate-300 active:scale-90 transition-all"
           >
             <X size={14} strokeWidth={3} />
           </button>

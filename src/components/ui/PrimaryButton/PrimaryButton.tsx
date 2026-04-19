@@ -20,7 +20,7 @@ export default function PrimaryButton({
     <button
       {...props}
       disabled={loading || props.disabled}
-      className={`
+      className={`nav-item
         group relative w-full cursor-pointer overflow-hidden rounded-xl p-4 font-bold text-white shadow-lg transition-all 
         hover:scale-[1.02] active:scale-95 disabled:cursor-not-allowed disabled:opacity-50 border-2 border-black
         ${variantClasses}
